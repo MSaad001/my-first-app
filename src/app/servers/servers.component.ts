@@ -10,7 +10,7 @@ import { timeout } from 'rxjs';
 export class ServersComponent {
   allowNewServers = false;
   serverCreationStatus = 'No server was created!';
-  serverName = '';
+  serverName = 'TestServer';
 
   constructor() {
     setTimeout(() => {

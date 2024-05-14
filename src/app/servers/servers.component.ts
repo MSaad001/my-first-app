@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { withHttpTransferCacheOptions } from '@angular/platform-browser';
 import { timeout } from 'rxjs';
 
 @Component({
@@ -8,6 +9,8 @@ import { timeout } from 'rxjs';
 })
 export class ServersComponent {
   allowNewServers = false;
+  serverCreationStatus = 'No server was created!';
+  serverName = '';
 
   constructor() {
     setTimeout(() => {
@@ -15,4 +18,11 @@ export class ServersComponent {
     }, 2000)
   }
   
+  onCreateServer() {
+    this.serverCreationStatus = 'A new server was created!';
+  }
+
+  onUpdateServerName(event: any) {
+    this.serverName = event.target.value;   
+  }
 }

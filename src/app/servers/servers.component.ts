@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-servers',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './servers.component.css'
 })
 export class ServersComponent {
+  allowNewServers = false;
 
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServers = true;
+    }, 2000)
+  }
+  
 }

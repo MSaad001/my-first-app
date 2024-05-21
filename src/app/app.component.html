@@ -46,7 +46,7 @@
             <li
             class="list-group-item"
             *ngFor="let even of evenNumbers"
-            [ngClass]="{even: even % 2 !== 0}"
+            [ngClass]="{even: even % 2 === 0}"
             [ngStyle]="{backgroundColor: even % 2 === 0 ? 'Green' : 'transparent'}">
             {{ even }}
           </li>
